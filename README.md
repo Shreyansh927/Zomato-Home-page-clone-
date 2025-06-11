@@ -17,6 +17,9 @@ Experience the application live or take a quick visual tour!
 
     ![Screenshot 2025-06-12 030916](https://github.com/user-attachments/assets/1bd3589f-1d6b-4081-8477-0f0cea5385bd)
 
+    
+    ![Screenshot 2025-06-12 044909](https://github.com/user-attachments/assets/aec578bc-ab7c-41e5-b41d-5d39103c6eb1)
+
 ---
 
 ## Features
