@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="p-3 navbar navbar-expand-lg navbar-light bg-light navbar-bg shadow fixed-top pr-3"
+      >
+        <a class="navbar-brand ml-3" href="#"
+          ><img
+            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+            class="ima w-100"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link ml-3 n" id="item1" href="#" style="color: black"
+              ><i class="fa-solid fa-dollar-sign mr-2"></i>Investor Relations</a
+            >
+            <a class="nav-link ml-3 n" id="item2" href="#" style="color: black"
+              ><i class="fa-solid fa-plus mr-2"></i>Add Restuarants</a
+            >
+            <a
+              class="nav-link ml-3 n"
+              id="item3"
+              href="#"
+              style="color: black"
+              data-toggle="modal"
+              data-target="#myModal"
+              ><i class="fa-solid fa-arrow-right-to-bracket mr-2"></i>Log in</a
+            >
+            <a
+              class="nav-link ml-3 n"
+              href="#"
+              style="color: black"
+              data-toggle="modal"
+              data-target="#mModal"
+              id="signUpModel"
+              ><i class="fa-solid fa-user-plus mr-2 mt-1" id="user"></i
+              ><span>Sign up</span></a
+            >
+            <a
+              class="nav-link ml-3 n hiddensign"
+              href="#"
+              style="color: black"
+              id="hiddensign"
+              ><i class="fa-solid fa-user-plus mr-2 mt-1" id="user"></i
+              ><span id="modalTitle">mo</span
+              ><i class="fa-solid fa-chevron-down ml-2 angle" id="angle2"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="all-modals">
+        <div class="modal fade" id="mModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Sign up</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="container">
+                  <div class="card shadow p-3 mb-3">
+                    <div class="-group">
+                      <input
+                        type="text"
+                        style="
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-color: #c7c3c3;
+                          border-width: 2px;
+                        "
+                        id="name"
+                        class="form-control"
+                        placeholder="Full Name"
+                      />
+                    </div>
+                    <hr class="hr1" />
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        style="
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-color: #c7c3c3;
+                          border-width: 2px;
+                        "
+                        id="email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <hr class="hr1" />
+                    <div class="form-group form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="termsCheckbox"
+                        onclick="checkBox()"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="termsCheckbox"
+                        style="font-size: 15px"
+                        >I agree to Zomato's
+                        <span style="color: #e34d42; cursor: pointer"
+                          >Terms of Service, Privacy Policy</span
+                        >
+                        and
+                        <span style="color: #e34d42; cursor: pointer"
+                          >Content Policies</span
+                        ></label
+                      >
+                    </div>
+                    <div class="popup text-center" id="Popup">
+                      <img
+                        class="mb-3 w-25"
+                        src="https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png"
+                      />
+                      <h4 class="mb-3">Thank You</h4>
+                      <p class="mb-4">You are successfully Signed In!!!</p>
+                      <button
+                        class="mt-3 ok-button"
+                        type="submit"
+                        id="closePop"
+                      >
+                        OK
+                      </button>
+                      <div class="mt-3 d-flex flex-row justify-content-center">
+                        <div
+                          class="spinner-border text-center"
+                          role="status"
+                          id="spinner"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center mt-2">
+                      <button class="btn btn-primary col-10" id="b77">
+                        Create account
+                      </button>
+
+                      <h1
+                        id="p"
+                        class="mt-3"
+                        style="font-size: 25px; font-family: fantasy"
+                      ></h1>
+                    </div>
+                  </div>
+                  <div class="container text-center">
+                    <div class="row mt-3 mb-3">
+                      <div class="col">
+                        <hr class="hr1" />
+                      </div>
+                      <div class="col-auto">
+                        <span>OR</span>
+                      </div>
+                      <div class="col">
+                        <hr class="hr1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card shadow p-3">
+                    <div class="text-center">
+                      <a
+                        href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1359209801%3A1716976998342166&ddm=0"
+                        target="_blank"
+                      >
+                        <button
+                          class="btn btn-outline-secondary col-10"
+                          style="border-radius: 5px"
+                        >
+                          <svg
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="height: 20px; width: 15px"
+                            viewBox="0 0 48 48"
+                            class="LgbsSe-Bz112c gog"
+                          >
+                            <g>
+                              <path
+                                fill="#EA4335"
+                                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                              ></path>
+                              <path
+                                fill="#4285F4"
+                                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+                              ></path>
+                              <path
+                                fill="#FBBC05"
+                                d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+                              ></path>
+                              <path
+                                fill="#34A853"
+                                d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                              ></path>
+                              <path fill="none" d="M0 0h48v48H0z"></path>
+                            </g>
+                          </svg>
+                          Sign in with Google
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col text-center">
+                      <p style="font-family: Roboto; font-size: 20px">
+                        Already have an account?
+                        <a
+                          href="https://loginpagee2024.ccbp.tech/"
+                          style="text-decoration: none"
+                          ><span
+                            style="
+                              color: #e34d42;
+                              font-family: Roboto;
+                              font-size: 20px;
+                              cursor: pointer;
+                            "
+                            >Login</span
+                          ></a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  id="closeButton"
+                  data-dismiss="modal"
+                >
+                  &times;
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body text-center p-4">
+                <!-- OTP Card -->
+                <div
+                  class="shadow p-3 card"
+                  id="login1"
+                  style="border-radius: 10px"
+                >
+                  <div class="d-flex flex-row">
+                    <div class="">
+                      <img
+                        src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp"
+                        style="height: 20px; width: 25px; cursor: pointer"
+                      />
+                    </div>
+                    <div class="ml-3">
+                      <span
+                        >+91
+                        <i
+                          class="fa-solid fa-chevron-down pl-1 downa"
+                          onClick="down()"
+                          id="down"
+                          style="cursor: pointer"
+                        ></i
+                      ></span>
+                    </div>
+
+                    <div class=" ">
+                      <input
+                        type="text"
+                        id="inputElement24"
+                        style="
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-color: #c7c3c3;
+                          border-width: 2px;
+                        "
+                        class="ml-4 col-12"
+                        placeholder="+91"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 text-center mt-4">
+                    <button
+                      class="but6 pl-5 pt-2 pb-2 pr-5 col-10 ml-4 text-center"
+                      style="background-color: #f22c61"
+                      id="but24"
+                    >
+                      <span id="loginButtonContent"
+                        >Send One Time Password</span
+                      >
+                      <div class="d-flex flex-row justify-content-center">
+                        <div
+                          class="spinner-border2 text-center spinner24"
+                          role="status"
+                          id="spinner24"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="shadow p-3 card shadow-card1"
+                  id="login2"
+                  style="border-radius: 10px"
+                >
+                  <h1
+                    class="otphead text-left p-2 mb-4"
+                    style="color: #4a4446; font-size: 25px"
+                  >
+                    OTP Verification
+                  </h1>
+                  <div class="otp-content text-center">
+                    <p
+                      class="text-center mb-3"
+                      style="color: #8c8b8b; font-size: 20px"
+                    >
+                      Check text message of your OTP
+                    </p>
+                    <div class="d-flex flex-row justify-content-center mb-5">
+                      <input
+                        class="mr-2 text-center"
+                        id="part1"
+                        maxlength="1"
+                        type="text"
+                        style="
+                          height: 45px;
+                          width: 45px;
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-width: 0.5px;
+                          border-color: #c4c0c1;
+                          color: #82797b;
+                          font-size: 20px;
+                          padding: 10px;
+                          background-color: #f0f1f5;
+                        "
+                      />
+                      <input
+                        class="mr-2 text-center"
+                        id="part2"
+                        maxlength="1"
+                        type="text"
+                        style="
+                          height: 45px;
+                          width: 45px;
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-width: 0.5px;
+                          border-color: #c4c0c1;
+                          color: #82797b;
+                          font-size: 20px;
+                          padding: 10px;
+                          background-color: #f0f1f5;
+                        "
+                      />
+                      <input
+                        class="mr-2 text-center"
+                        id="part3"
+                        maxlength="1"
+                        type="text"
+                        style="
+                          height: 45px;
+                          width: 45px;
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-width: 0.5px;
+                          border-color: #c4c0c1;
+                          color: #82797b;
+                          font-size: 20px;
+                          padding: 10px;
+                          background-color: #f0f1f5;
+                        "
+                      />
+                      <input
+                        class="mr-2 text-center"
+                        id="part4"
+                        maxlength="1"
+                        type="text"
+                        style="
+                          height: 45px;
+                          width: 45px;
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-width: 0.5px;
+                          border-color: #c4c0c1;
+                          color: #82797b;
+                          font-size: 20px;
+                          padding: 10px;
+                          background-color: #f0f1f5;
+                        "
+                      />
+                      <input
+                        class="mr-2 text-center"
+                        id="part5"
+                        maxlength="1"
+                        type="text"
+                        style="
+                          height: 45px;
+                          width: 45px;
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-width: 0.5px;
+                          border-color: #c4c0c1;
+                          color: #82797b;
+                          font-size: 20px;
+                          padding: 10px;
+                          background-color: #f0f1f5;
+                        "
+                      />
+                      <input
+                        class="mr-2 text-center"
+                        id="part6"
+                        maxlength="1"
+                        type="text"
+                        style="
+                          height: 45px;
+                          width: 45px;
+                          border-radius: 5px;
+                          border-style: solid;
+                          border-width: 0.5px;
+                          border-color: #c4c0c1;
+                          color: #82797b;
+                          font-size: 20px;
+                          padding: 10px;
+                          background-color: #f0f1f5;
+                        "
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-11 text-center mt-3 mr-4">
+                    <button
+                      class="but6 pl-5 pt-2 pb-2 pr-5 col-10 ml-4"
+                      style="background-color: #f22c61"
+                      id="loginButton"
+                    >
+                      <span id="loginContent">Login</span>
+                      <div class="d-flex flex-row justify-content-center">
+                        <div
+                          class="spinner-border2 text-center spinner24"
+                          role="status"
+                          id="spinner26"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- OR Divider -->
+                <div class="container" id="otpHr">
+                  <div class="mt-3 mb-3 row">
+                    <div class="col-5">
+                      <hr class="hr1" />
+                    </div>
+                    <div class="col-1 text-center">
+                      <span>OR</span>
+                    </div>
+                    <div class="col-5 text-right">
+                      <hr class="hr1" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sign In with Options -->
+                <div
+                  class="shadow p-3 card text-center"
+                  style="border-radius: 10px"
+                  id="food"
+                >
+                  <div class="col-12 text-center mb-3">
+                    <button
+                      class="col-10 pt-2 pb-2 b71 text-center"
+                      style="
+                        border-style: solid;
+                        border-color: #edebeb;
+                        border-radius: 5px;
+                      "
+                    >
+                      <i
+                        class="fa-solid fa-envelope"
+                        style="color: #e05a51"
+                      ></i>
+                      <span class="pl-2">Continue with Email</span>
+                    </button>
+                  </div>
+                  <div class="col-12 text-center">
+                    <a
+                      href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1359209801%3A1716976998342166&ddm=0"
+                      target="_blank"
+                    >
+                      <button
+                        class="col-10 pt-2 pb-2 b71"
+                        style="
+                          border-style: solid;
+                          background-color: #e8e6e6;
+                          border-color: #edebeb;
+                          border-radius: 5px;
+                        "
+                      >
+                        <svg
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          style="height: 20px; width: 15px"
+                          viewBox="0 0 48 48"
+                          class="LgbsSe-Bz112c"
+                        >
+                          <g>
+                            <path
+                              fill="#EA4335"
+                              d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                            ></path>
+                            <path
+                              fill="#4285F4"
+                              d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+                            ></path>
+                            <path
+                              fill="#FBBC05"
+                              d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+                            ></path>
+                            <path
+                              fill="#34A853"
+                              d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                            ></path>
+                            <path fill="none" d="M0 0h48v48H0z"></path>
+                          </g>
+                        </svg>
+                        <span class="pl-1">Sign in with Google</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 pl-3 otpHr mt-4 pr-3">
+                  <hr class="hr1" />
+                </div>
+                <div class="container text-center" id="otp1">
+                  <div class="col-12 text-left">
+                    <p style="font-family: Roboto; font-size: 20px">
+                      New to FoodMuch?
+                      <span
+                        class="pl-2"
+                        style="
+                          color: #e34d42;
+                          font-family: Roboto;
+                          font-size: 20px;
+                          cursor: pointer;
+                        "
+                        >Create account</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="container text-center resendOtp" id="resendOtp">
+                  <div class="col-12 text-left">
+                    <p style="font-family: Roboto; font-size: 20px">
+                      <span style="color: #615e5f">Not received OTP?</span>
+                      <span
+                        class="pl-2"
+                        style="
+                          color: #f73b71;
+                          font-family: Roboto;
+                          font-size: 20px;
+                          cursor: pointer;
+                        "
+                        id="resendOtp"
+                        >Resend Now</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="image-container pt-md-5 pl-md-5 pr-md-5 d-flex flex-column block justify-content-center"
+      >
+        <img
+          class="w-25 d-none d-lg-block img1st mt-4 mb-2"
+          loading="lazy"
+          id="zomimg1"
+          src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"
+        />
+        <img
+          class="w-50 d-lg-none img1st mt-4 mb-2"
+          loading="lazy"
+          id="zomimg2"
+          src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"
+        />
+        <p class="H1 mt-3 text-center" id="zomimgp">
+          Discover the best food & drinks in <span class="span1">Pune</span>
+        </p>
+        <div
+          class="container d-flex flex-row justify-content-center p-5"
+          id="zominput"
+        >
+          <div
+            class="search-box row text-center col-10"
+            style="background-color: white; height: 45px; border-radius: 6px"
+          >
+            <div class="col-4">
+              <div class="d-flex">
+                <div class="col-md-2 text-center col-2 p-2 pl-0">
+                  <i class="fas fa-map navigation mr-5"></i>
+                </div>
+                <div class="col-9 p-1">
+                  <input
+                    type="text"
+                    class="search-place"
+                    placeholder="Pune"
+                    style="border-style: none"
+                  />
+                </div>
+                <div class="col-1 p-2">
+                  <i class="fas fa-caret-down caret-down" id="caretDown"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="d-flex">
+                <div class="divider mr-4"></div>
+                <div class="search-icon pt-1">
+                  <i class="fas fa-search"></i>
+                </div>
+                <input
+                  id="searchDish"
+                  class="w-100 ml-3 pt-2 search-input"
+                  style="border-style: none"
+                  type="text"
+                  placeholder="Search for info of any dish..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container con d-block p-3 mt-3" id="s">
+      <div class="row" id="searchResults"></div>
+    </div>
+
+    <div class="container p-md-5">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 col-lg-4 cct mb-5"
+          style="border-radius: 15px; cursor: pointer"
+        >
+          <div
+            class="card-container block shadow"
+            style="border-radius: 15px; cursor: pointer"
+          >
+            <div
+              class="card-container block shadow"
+              style="border-radius: 15px; cursor: pointer"
+            >
+              <div style="overflow: hidden">
+                <img
+                  loading="lazy"
+                  src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&amp;fit=around|402:360&amp;crop=402:360;*,*"
+                  class="w-100 image img25"
+                  style="
+                    border-left-top-radius: 15px;
+                    border-right-top-radius: 15px;
+                    overflow: hidden;
+                  "
+                />
+              </div>
+              <div
+                class="p-1 curve-card"
+                style="border-radius: 15px; cursor: pointer"
+              >
+                <h1 class="pt-3 pl-3" style="font-size: 30px; color: ">
+                  Order Online
+                </h1>
+                <p class="pl-3 pp" style="font-size: 20px; color: #7d7d7c">
+                  Stay home and to your doorstep.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-md-6 col-lg-4 cct mb-5"
+          style="border-radius: 15px; cursor: pointer"
+        >
+          <div
+            class="card-container block shadow"
+            style="border-radius: 15px; cursor: pointer"
+          >
+            <div
+              class="card-container shadow"
+              style="border-radius: 15px; cursor: pointer"
+            >
+              <div style="overflow: hidden">
+                <img
+                  loading="lazy"
+                  src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&amp;fit=around|402:360&amp;crop=402:360;*,*"
+                  class="w-100 image img25"
+                  style="
+                    border-left-top-radius: 15px;
+                    border-right-top-radius: 15px;
+                    border-left-bottom-radius: 20px;
+                  "
+                />
+              </div>
+              <div
+                class="p-1 curve-card"
+                style="border-radius: 15px; cursor: pointer"
+              >
+                <h1 class="pt-3 pl-3" style="font-size: 30px; color: ">
+                  Dining
+                </h1>
+                <p class="pl-3 pp" style="font-size: 20px; color: #7d7d7c">
+                  View the city's favourite dining venue.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-12 col-md-6 col-lg-4 cct mb-5"
+          style="border-radius: 15px; cursor: pointer"
+        >
+          <div
+            class="card-container block shadow"
+            style="border-radius: 15px; cursor: pointer"
+          >
+            <div
+              class="card-container shadow"
+              style="border-radius: 15px; cursor: pointer"
+            >
+              <div style="overflow: hidden">
+                <img
+                  loading="lazy"
+                  src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&amp;fit=around|402:360&amp;crop=402:360;*,*"
+                  class="w-100 img25 image"
+                  style="
+                    border-left-top-radius: 15px;
+                    border-right-top-radius: 15px;
+                  "
+                />
+              </div>
+              <div
+                class="p-1 curve-card"
+                style="border-radius: 15px; cursor: pointer"
+              >
+                <h1 class="pt-3 pl-3" style="font-size: 30px; color: ">
+                  Dining
+                </h1>
+                <p class="pl-3 pp" style="font-size: 20px; color: #7d7d7c">
+                  View the city's favourite dining venue.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-md-5 pt-3">
+      <div class="col-12 text-left mb-5">
+        <h1 class="pp iDetRV" style="color: #5c5657; font-size: 30px">
+          Popular Localities in and around
+          <span style="font-size: 30px; color: #fc6077">Lucknow</span>
+        </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Gomati Nagar
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  1672 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Gomati Nagar
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  1672 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Hazratganj
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  267 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Aliganj
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  831 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="b card1 block pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Indra Nagar
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  651 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card1 block b pr-3">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Alambagh
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  391 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Aashiana
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  672 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-6 col-md-4 col-lg-3 mb-4"
+          id="showMoree"
+          onClick="showMore()"
+        >
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 p-3">
+                <h1 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Show More...
+                </h1>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i1">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Chowk
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  279 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i2">
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Aminabad
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  74 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i3">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Mahanagar
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  88 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i4">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Lalbagh
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  76 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i5">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Charbagh
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  96 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i6">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Rajajipuram
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  307 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i7">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Khurram Nagar
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  1672 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i8">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Nishatganj
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  70 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-4-md c25 col-lg-3 mb-4" id="i9">
+          <div class="card1 block pr-3 b" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 pt-3">
+                <h4 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Kanpur Road
+                </h4>
+                <p class="pp iDetRV" style="color: #7d7b77; font-size: 15px">
+                  79 places
+                </p>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-6 col-4-md col-lg-3 mb-4 c25"
+          id="showLess"
+          onClick="showLess()"
+        >
+          <div class="card1 block b pr-3" style="">
+            <div class="d-flex flex-row">
+              <div class="col-8 p-3">
+                <h1 class="pp iDetRV" style="color: #363533; font-size: 17px">
+                  Show Less...
+                </h1>
+              </div>
+              <div class="col-4 pt-4 pr-4">
+                <i
+                  class="fas fa-hand-point-right a"
+                  style="font-size: 30px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wuc p-lg-3 mb-3">
+      <div class="container">
+        <div class="wrapper mb-3 pb-3 pl-3 pr-3 swipper">
+          <h1
+            class="menu-section-heading mr-5 mt-5 pp iDetRV"
+            style="color: black; font-size: 40px; font-weight: 500"
+          >
+            What's on your mind?
+          </h1>
+          <div class="swiper-button-prev prev"></div>
+          <div class="slide-content p-3 block">
+            <div class="carousel swiper-container block">
+              <div class="swiper-wrapper block">
+                <div class="card24 mb-5 mt-3 swiper-slide">
+                  <div
+                    class="round-card block d-flex flex-column pt-4 pb-2 justify-content-center"
+                  >
+                    <div class="img text-center block m-2">
+                      <img
+                        loading="lazy"
+                        class="food w-75 shadow mb-1"
+                        draggable="false"
+                        src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"
+                      />
+                      <h4 class="stanza1">Pizza</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card24 block mt-3 swiper-slide">
+                  <div class="round-card block d-flex flex-column pt-3 pb-2">
+                    <div class="img text-center m-2">
+                      <img
+                        loading="lazy"
+                        class="food w-75 shadow mb-1"
+                        draggable="false"
+                        src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png"
+                      />
+                      <h4 class="stanza1">Burger</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card24 block mt-3 swiper-slide">
+                  <div class="round-card block d-flex flex-column pt-3 pb-2">
+                    <div class="img text-center m-2">
+                      <img
+                        loading="lazy"
+                        class="food w-75 shadow mb-1"
+                        draggable="false"
+                        src="https://b.zmtcdn.com/data/o2_assets/37df381734b24f138af4a84fd7e4d4ec1716558578.jpeg"
+                      />
+                      <h4 class="stanza1">Biryani</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card24 block mt-3 swiper-slide">
+                  <div class="round-card block d-flex flex-column pt-3 pb-2">
+                    <div class="img text-center m-2">
+                      <img
+                        loading="lazy"
+                        class="food w-75 shadow mb-1"
+                        draggable="false"
+                        src="https://b.zmtcdn.com/data/dish_images/d5ab931c8c239271de45e1c159af94311634805744.png"
+                      />
+                      <h4 class="stanza1">Cake</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card24 block mt-3 swiper-slide">
+                  <div class="round-card block d-flex flex-column pt-3 pb-3">
+                    <div class="img text-center m-2">
+                      <img
+                        loading="lazy"
+                        class="food w-75 shadow mb-1"
+                        draggable="false"
+                        src="https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png"
+                      />
+                      <h4 class="stanza1">Sandwich</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="card24 block text-center mt-3 swiper-slide">
+                  <div class="round-card d-flex flex-column pt-3 pb-5">
+                    <div class="img text-center m-2">
+                      <img
+                        loading="lazy"
+                        class="food w-75 shadow mb-1"
+                        draggable="false"
+                        src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png"
+                      />
+                      <h4 class="stanza1">Rolls</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next prev"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="container p-lg-5">
+          <div class="row">
+            <div class="col-12 col-md-12 d-lg-none text-center block">
+              <img
+                loading="lazy"
+                src="https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png"
+                class="w-75"
+              />
+            </div>
+
+            <div class="col-12 col-md-5 d-none d-lg-block text-right block">
+              <img
+                loading="lazy"
+                src="https://b.zmtcdn.com/data/o2_assets/f773629053b24263e69f601925790f301680693809.png"
+                class="w-100"
+              />
+            </div>
+
+            <div class="col-12 col-md-12 d-lg-none block pl-5">
+              <h1 class="mt-4 mb-2 iDetRV">Get the Zomato app</h1>
+              <p class="iDetRV" style="color: #5b5b5c">
+                We will send you a link, open it on your phone to download the
+                app
+              </p>
+
+              <p class="iDetRV" style="font-size: 14px; color: #6f6d70">
+                Download app from
+              </p>
+              <div class="row mt-3">
+                <div class="col-5">
+                  <a
+                    href="https://play.google.com/store/search?q=zomato&c=apps"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                      class="w-75 shadow"
+                      style="cursor: pointer"
+                    />
+                  </a>
+                </div>
+                <div class="col-5">
+                  <a
+                    href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                      class="w-75 shadow"
+                      style="cursor: pointer"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-7 d-none d-lg-block block text-left pr-5">
+              <h1
+                class="mt-4 mb-3 iDetRV"
+                style="line-height: 1.2; font-size: 40px; color: black"
+              >
+                Get the Zomato app
+              </h1>
+              <p
+                class="iDetRV"
+                style="font-smooth: ; font-size: 18px; color: #5b5b5c"
+              >
+                We will send you a link, open it on your phone to download the
+                app...
+              </p>
+              <div class="wrapup" id="wrapUp">
+                <div class="d-flex text-center mb-2">
+                  <div
+                    class="form-check emailinput form-check-inline mr-5"
+                    id="emailInput"
+                    style="cursor: pointer"
+                  >
+                    <input
+                      class="form-check-input shadow"
+                      style="
+                        cursor: pointer;
+                        border-style: solid;
+                        border-width: 1px;
+                      "
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      onclick="f1()"
+                      value="option1"
+                    />
+                    <label
+                      class="form-check-label iDetRV"
+                      for="inlineRadio1"
+                      style="color: #5b5b5c; cursor: pointer"
+                      >Email</label
+                    >
+                  </div>
+                  <div
+                    class="form-check phoneinput form-check-inline"
+                    id="phoneInput"
+                    style="cursor: pointer"
+                  >
+                    <input
+                      class="form-check-input shadow"
+                      style="
+                        cursor: pointer;
+                        border-style: solid;
+                        border-width: 1px;
+                      "
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      onclick="f2()"
+                      value="option2"
+                    />
+                    <label
+                      class="form-check-label iDetRV"
+                      for="inlineRadio2"
+                      style="color: #5b5b5c; cursor: pointer"
+                      >Phone</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <div class="col-6 col-md-8 mb-2 mt-2 text-left">
+                    <input
+                      type="text"
+                      class="mr-3 col-10 p-3 shadow text-left"
+                      placeholder=""
+                      id="place"
+                      style="
+                        border-style: solid;
+                        border-radius: 5px;
+                        height: 50px;
+                        border-width: 0.5px;
+                      "
+                    />
+                  </div>
+                  <div class="col-3 col-md-4">
+                    <button class="b1 mt-2 iDetRV" id="shareApp">
+                      <span id="shareid">Share App</span>
+                      <div
+                        class="d-flex flex-column justify-content-center mt-2"
+                        style="align-items: center"
+                      >
+                        <div
+                          class="spinner-border2 text-center"
+                          role="status"
+                          id="spinner2"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    </button>
+                    <audio
+                      id="clickSound"
+                      src="https://freesound.org/data/previews/250/250629_4486188-lq.mp3"
+                      preload="auto"
+                    ></audio>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapupp" id="wrapUp2">
+                <div class="d-flex text-center mb-2">
+                  <div
+                    class="form-check form-check-inline mr-5"
+                    style="cursor: pointer"
+                  >
+                    <input
+                      class="form-check-input shadow"
+                      style="
+                        cursor: pointer;
+                        border-style: solid;
+                        border-width: 1px;
+                      "
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      onclick="f1()"
+                      value="option1"
+                    />
+                    <label
+                      class="form-check-label iDetRV"
+                      for="inlineRadio1"
+                      style="color: #5b5b5c; cursor: pointer"
+                      >Email</label
+                    >
+                  </div>
+                  <div
+                    class="form-check form-check-inline"
+                    style="cursor: pointer"
+                  >
+                    <input
+                      class="form-check-input shadow"
+                      style="
+                        cursor: pointer;
+                        border-style: solid;
+                        border-width: 1px;
+                      "
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      onclick="f2()"
+                      value="option2"
+                    />
+                    <label
+                      class="form-check-label iDetRV"
+                      for="inlineRadio2"
+                      style="color: #5b5b5c; cursor: pointer"
+                      >Phone</label
+                    >
+                  </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <div class="col-6 col-md-8 mb-2 mt-2 text-left">
+                    <input
+                      type="text"
+                      class="mr-3 col-10 p-3 shadow text-left"
+                      placeholder=""
+                      id="place"
+                      style="
+                        border-style: solid;
+                        border-radius: 5px;
+                        height: 50px;
+                        border-width: 0.5px;
+                      "
+                    />
+                  </div>
+                  <div class="col-3 col-md-4">
+                    <button class="b1 mt-2 iDetRV" id="shareApp">
+                      <span id="shareid">Share App</span>
+                      <div
+                        class="d-flex flex-column justify-content-center mt-2"
+                        style="align-items: center"
+                      >
+                        <div
+                          class="spinner-border2 text-center"
+                          role="status"
+                          id="spinner2"
+                        >
+                          <span class="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    </button>
+                    <audio
+                      id="clickSound"
+                      src="https://freesound.org/data/previews/250/250629_4486188-lq.mp3"
+                      preload="auto"
+                    ></audio>
+                  </div>
+                </div>
+              </div>
+              <p
+                class="iDetRV"
+                style="font-size: 14px; font-family: Roboto; color: #6f6d70"
+              >
+                Download app from
+              </p>
+              <div class="row mt-3">
+                <div class="col-5">
+                  <a
+                    href="https://play.google.com/store/search?q=zomato&c=apps"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                      class="w-75 shadow"
+                      style="cursor: pointer"
+                    />
+                  </a>
+                </div>
+                <div class="col-5">
+                  <a
+                    href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                      class="w-75 shadow"
+                      style="cursor: pointer"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="mb-" style="font-size: 55px">Corporate announcements</h1>
+          </div>
+          <div class="col-12 mb-3">
+            <hr class="hr10" />
+          </div>
+          <div class="col-12 mt- mb-3 block">
+            <p class="sp">16 June 2024</p>
+            <p class="lp">
+              Zomato - Clarification on news articles related to acquisition of
+              Paytm’s movies and events business
+            </p>
+            <details class="mb-">
+              <summary class="summary mb-4">Link</summary>
+              <ul>
+                <a href="" taget="_blank" class="ab">
+                  <li class="list-item">
+                    https://b.zmtcdn.com/investor-relations/7836139ab8da985a49106b8d78a366bd_1715631601.pdf
+                  </li>
+                </a>
+              </ul>
+            </details>
+          </div>
+
+          <div class="col-12 mt- mb-3">
+            <hr class="hr10" />
+          </div>
+          <div class="col-12 mt- mb-3 block">
+            <p class="sp">31 May 2024</p>
+            <p class="lp">
+              Zomato - Newspaper Publication (Postal Ballot Notice)
+            </p>
+            <details>
+              <summary class="summary mb-4">Link</summary>
+              <ul>
+                <a href="" taget="_blank" class="ab">
+                  <li class="list-item">
+                    https://b.zmtcdn.com/investor-relations/d0efd331adb6bdea3ae1d280ba987ceb_1715631792.pdf
+                  </li>
+                </a>
+              </ul>
+            </details>
+          </div>
+
+          <div class="col-12 mt- mb-3">
+            <hr class="hr10" />
+          </div>
+          <div class="col-12 mt- mb-3 block">
+            <p class="sp">21 May 2024</p>
+            <p class="lp">
+              Zomato - Disclosure under Regulation 30 (Surrender of certificate
+              of authorisation for online payment aggregation and withdrawal of
+              application for prepaid payment instruments)
+            </p>
+            <details>
+              <summary class="summary mb-4">Link</summary>
+              <ul>
+                <a href="" taget="_blank" class="ab">
+                  <li class="list-item">
+                    https://b.zmtcdn.com/investor-relations/80fd88594fbaefdc6e02581e956f5e4b_1715631894.pdf
+                  </li>
+                </a>
+              </ul>
+            </details>
+          </div>
+
+          <div class="col-12 mt- mb-3">
+            <hr class="hr10" />
+          </div>
+          <div class="col-12 mt- mb-3 block">
+            <p class="sp">15 May 2024</p>
+            <p class="lp">
+              Zomato - Related party transaction for the half year ended March
+              31, 2024
+            </p>
+            <details>
+              <summary class="summary mb-4">Link</summary>
+              <ul>
+                <a href="" taget="_blank" class="ab">
+                  <li class="list-item">
+                    https://b.zmtcdn.com/investor-relations/975eda97bf3aa59e52c29c5ee94a7794_1715869384.pdf
+                  </li>
+                </a>
+              </ul>
+            </details>
+          </div>
+
+          <div class="col-12 mt- mb-3">
+            <hr class="hr10" style="color: gray" />
+          </div>
+          <div class="col-12 mt- mb-3 block">
+            <p class="sp">8 May 2024</p>
+            <p class="lp">
+              Zomato - Disclosure under Regulation 30 (Resignation of statutory
+              auditors of wholly owned subsidiaries)
+            </p>
+            <details>
+              <summary class="summary mb-4">Link</summary>
+              <ul>
+                <a href="" taget="_blank" class="ab">
+                  <li class="list-item">link 1</li>
+                </a>
+              </ul>
+            </details>
+          </div>
+
+          <a
+            href="https://www.zomato.com/investor-relations/news-and-events"
+            style="text-decoration: none"
+            target="_blank"
+          >
+            <div class="b10 pr-5">
+              See all announcements
+              <i
+                class="fa-solid fa-chevron-right arrow12 ml-4 mt-2 text-right"
+              ></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="p-5">
+        <div class="container p-5" style="background-color: #fafcfc">
+          <div class="row">
+            <div class="col-12 text-left mb-4">
+              <h1 class="pp iDetRV">Explore options near me</h1>
+            </div>
+          </div>
+          <div
+            class="row ca mb-4 pt-3 block"
+            style="
+              border-style: solid;
+              border-width: 1px;
+              border-color: #d0cfd4;
+              border-radius: 6px;
+              cursor: pointer;
+              background-color: white;
+            "
+            onclick="toggleContent('id1', 'arrow1')"
+          >
+            <div class="col-10 text-left">
+              <p class="pp iDetRV" style="font-size: 20px; color: #48474d">
+                Popular cuisines near me
+              </p>
+              <p id="id1" class="iDetRV block"></p>
+              <p id="id2" class="block"></p>
+              <p id="id3" class="block"></p>
+              <p id="id4" class="block"></p>
+            </div>
+            <div class="col-2 text-right">
+              <i class="fa-solid fa-angle-down" id="arrow1"></i>
+            </div>
+          </div>
+
+          <div
+            class="row ca mb-4 pt-3"
+            style="
+              border-style: solid;
+              border-width: 1px;
+              border-color: #d0cfd4;
+              border-radius: 6px;
+              cursor: pointer;
+              background-color: white;
+            "
+            onclick="toggleContent('id5', 'arrow2')"
+          >
+            <div class="col-10 text-left">
+              <p class="pp iDetRV" style="font-size: 20px; color: #48474d">
+                Popular restaurant types near me
+              </p>
+              <p id="id5" class="iDetRV"></p>
+              <p id="id6" class=""></p>
+              <p id="id7" class=""></p>
+              <p id="id8" class=""></p>
+            </div>
+            <div class="col-2 text-right">
+              <i class="fa-solid fa-angle-down" id="arrow2"></i>
+            </div>
+          </div>
+
+          <div
+            class="row ca mb-4 pt-3"
+            style="
+              border-style: solid;
+              border-width: 1px;
+              border-color: #d0cfd4;
+              border-radius: 6px;
+              cursor: pointer;
+              background-color: white;
+            "
+            onclick="toggleContent('id9', 'arrow3')"
+          >
+            <div class="col-10 text-left">
+              <p class="pp iDetRV" style="font-size: 20px; color: #48474d">
+                Top Restaurant Chains
+              </p>
+              <p id="id9" class="iDetRV"></p>
+              <p id="id10" class=""></p>
+              <p id="id11" class=""></p>
+              <p id="id12" class=""></p>
+            </div>
+            <div class="col-2 text-right">
+              <i class="fa-solid fa-angle-down" id="arrow3"></i>
+            </div>
+          </div>
+
+          <div
+            class="row ca mb-3 pt-3"
+            style="
+              border-style: solid;
+              border-width: 1px;
+              border-color: #d0cfd4;
+              border-radius: 6px;
+              cursor: pointer;
+              background-color: white;
+            "
+            onclick="toggleContent('id13', 'arrow4')"
+          >
+            <div class="col-10 text-left">
+              <p class="pp iDetRV" style="font-size: 20px; color: #48474d">
+                Cities We Deliver To
+              </p>
+              <p id="id13" class="iDetRV"></p>
+              <p id="id14" class=""></p>
+              <p id="id15" class=""></p>
+              <p id="id16" class=""></p>
+            </div>
+            <div class="col-2 text-right">
+              <i class="fa-solid fa-angle-down" id="arrow4"></i>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          let casee = [true, true, true, true];
+
+          function toggleContent(contentId, arrowId) {
+            const contentElements = {
+              id1: [
+                "Bakery food near me",
+                "Beverages food near me",
+                "Biryani food near me",
+                "Burger food near me",
+              ],
+              id5: [
+                "Bars near me",
+                "Beverages food near me",
+                "Biryani food near me",
+                "Burger food near me",
+              ],
+              id9: [
+                "Bakery food near me",
+                "Beverages food near me",
+                "Biryani food near me",
+                "Burger food near me",
+              ],
+              id13: [
+                "Bakery food near me",
+                "Beverages food near me",
+                "Biryani food near me",
+                "Burger food near me",
+              ],
+            };
+            const index = parseInt(contentId.match(/\d+/)[0]) / 4;
+            let ids = [];
+            for (let i = 0; i < 4; i++) {
+              ids.push(document.getElementById(contentId));
+              contentId =
+                contentId.slice(0, -1) + (parseInt(contentId.slice(-1)) + 1);
+            }
+            const arrow = document.getElementById(arrowId);
+
+            if (casee[index - 1]) {
+              for (let i = 0; i < ids.length; i++) {
+                ids[i].textContent = contentElements[ids[0].id][i];
+                ids[i].style.fontFamily = "Okra, Helvetica, sans-serif";
+                ids[i].style.color = "#757478";
+              }
+              arrow.style.transform = "rotate(180deg)";
+            } else {
+              for (let id of ids) {
+                id.textContent = "";
+              }
+              arrow.style.transform = "rotate(0deg)";
+            }
+            casee[index - 1] = !casee[index - 1];
+          }
+        </script>
+      </div>
+
+      <div
+        style="
+          background-image: radial-gradient(
+            #796ef5#6a5cfa,
+            #6a5cfa,
+            #4130f2,
+            #2917eb
+          );
+        "
+      >
+        <div class="container p-lg-5">
+          <div class="col-12 text-left">
+            <h1 class="mb-2 iDetRV" style="font-weight: ; color: black">
+              Collections
+            </h1>
+          </div>
+
+          <div class="row pl-3 mb-2">
+            <div class="col-8 text-left">
+              <p class="iDetRV pp" style="color: #565c5b; font-size: 17px">
+                Explore curated lists of top restaurants, cafes, pubs, and bars
+                in Kanpur, based on trends
+              </p>
+            </div>
+            <div class="col-4 text-right d-flex" style="cursor: pointer">
+              <a
+                href="https://www.zomato.com/kanpur/collections"
+                target="_blank"
+                class="iDetRV pp"
+                style="
+                  color: #f74355;
+                  font-size: 17px;
+                  text-decoration: none;
+                  font-family: ;
+                "
+                >All collections in Kanpur
+              </a>
+
+              <i
+                class="fa-solid fa-caret-right ml-1 pt-1 iDetRV"
+                style="
+                  color: #f74355;
+                  font-size: 17px;
+                  text-decoration: none;
+                  font-family: ;
+                "
+              ></i>
+            </div>
+          </div>
+
+          <div class="container p-3">
+            <div class="row">
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/96541881ed7b42d424990403ac3afdbf_1712923153.png?output-format=webp/"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">Top Trend spots</h4>
+                    <h5 class="places mb-2" style="color: white">
+                      30 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/3b1f56c1936a6bfa702efd28188ebe6f_1688043261.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Something for everybody
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      30 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/8ae27cd9a69b3f7762ee64549ebf988a_1722425524.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Romantic Dinning Place
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      31 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/2b9361aa328a43b08986f77bbec280bd_1709810606.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">Best Pubs & Bars</h4>
+                    <h5 class="places mb-2" style="color: white">
+                      38 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/ce8f94a179d859d01f94c441d67ef5ad_1706256877.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Best Buffets in Town
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      28 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/b002ac3dedef51dd605505656450b099_1696922552.jpg"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Best Rooftops Places
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      32 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/f312ede290cb7ab011e7aefe33205cc5_1683902229.jpg"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">Terrific Thallis</h4>
+                    <h5 class="places mb-2" style="color: white">
+                      25 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/96541881ed7b42d424990403ac3afdbf_1712923153.png?output-format=webp/"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Best Burger Joins
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      26 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="	https://b.zmtcdn.com/data/collections/8049ed160722a4dcf04adde41aaac43e_1715683421.jpg"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">Pure Veg Places</h4>
+                    <h5 class="places mb-2" style="color: white">
+                      18 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/ff8a739dbb06a879e54e7e4797dc8033_1684638549.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Pet Freindly Places
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      35 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="	https://b.zmtcdn.com/data/collections/1f9f3e9fea022dc7a4728ebf24c8a319_1715683195.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Work-Freindly Places
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      28 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/69d75f2c53801c804386438e724361ed_1708513153.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Superb Seafood Places
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      24 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="img-cont pb-2 mb-4 block">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/088c7eea7df002b1fef0c1d257935be4_1709812453.png"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Premiuim Coffe Places
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      32 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 col-xl-3 block">
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/77dae8411ea7601f3e193c802738ddc2_1674840183.jpg"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">Pure Veg Places</h4>
+                    <h5 class="places mb-2" style="color: white">
+                      27 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 col-xl-3 block"
+                style="overflow: hidden"
+              >
+                <div class="img-cont pb-2 mb-4">
+                  <div style="overflow: hidden">
+                    <img
+                      class="imgge"
+                      src="https://b.zmtcdn.com/data/collections/3928c2cda330ed47e2b49a385a289e64_1674839999.jpg"
+                    />
+                  </div>
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">
+                      Best Luxuxry Dinning
+                    </h4>
+                    <h5 class="places mb-2" style="color: white">
+                      18 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-6 col-md-4 col-lg-3 col-xl-3 block"
+                style="overflow: hidden"
+              >
+                <div class="img-cont pb-2 mb-4">
+                  <img
+                    class="imgge"
+                    src="https://b.zmtcdn.com/data/collections/d6c20926317f…61c59af08d566f1_1674839603.jpg?output-format=webp"
+                  />
+                  <div class="overlay d-flex flex-column justify-content-end">
+                    <h4 class="spots" style="color: white">Lit Party Places</h4>
+                    <h5 class="places mb-2" style="color: white">
+                      11 Places <i class="fas fa-caret-right text-white zz"></i>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container mt-lg-5"
+      style="background-color: #ffffff; border-radius: 10px"
+    >
+      <div class="row">
+        <div class="col-xl-6 mb-5 text-left">
+          <img
+            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
+            class="w-25"
+          />
+        </div>
+        <div class="col-xl-6 mb-5 pb-3 text-right d-flex">
+          <div class="wrapup">
+            <div class="container text-center popup3" id="Popup3">
+              <div class="row">
+                <div class="m-4">
+                  <div
+                    class="m-3"
+                    id=""
+                    style="background-color: white; border-radius: 6px"
+                  >
+                    <div
+                      class="d-flex flex-row justify-content-center shadow-lg pt-3 pb-1 pl-3 pr-3 mb-2"
+                      style="border-radius: 10px"
+                    >
+                      <div
+                        class="mr-3 d-flex flex-row justify-content-center text-center"
+                        style="max-width: 200px"
+                      >
+                        <p
+                          class="text-center indiacard p-2"
+                          style="cursor: pointer"
+                        >
+                          <img
+                            class="india w-50 pb-1 pl-2 pt-1 mr-2"
+                            src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp"
+                          />
+                          India
+                        </p>
+                      </div>
+                      <div class=" ">
+                        <p
+                          class="text-center uaecard p-3"
+                          style="cursor: pointer"
+                        >
+                          <img
+                            class="w-50 uae mr-2 pl-2"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/1200px-Flag_of_the_United_Arab_Emirates.svg.png?20181221104309"
+                          />
+                          UAE
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="india-globe-button buttonn mr-5 pt-2 pb-2"
+              id="openPopup3"
+              style="
+                border-style: solid;
+                border-radius: 6px;
+                border-width: 0.5px;
+                border-color: #94928d;
+                color: black;
+                background-color: white;
+                font-size: 25px;
+              "
+            >
+              <img
+                src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp"
+                class="w-25"
+              />
+              <span class="ml-2 mr-2">India</span>
+              <i class="fa-solid fa-chevron-down angle" id="angle0"></i>
+            </button>
+          </div>
+
+          <div class="popup2" id="Popup2" style>
+            <div
+              class="shadow m-4 p-2"
+              style="max-height: 200px; overflow: auto"
+              id="hide2"
+            >
+              <div class="para-container">
+                <p class="text-center indiacard p-2">English</p>
+                <p class="text-center uaecard p-2">हिदीं</p>
+                <p class="text-center uaecard p-2">Türkçe</p>
+                <p class="text-center uaecard p-2">Português (BR)</p>
+                <p class="text-center uaecard p-2">Indonesian</p>
+                <p class="text-center uaecard p-2">Português (PT)</p>
+                <p class="text-center uaecard p-2">Español</p>
+                <p class="text-center uaecard p-2">Čeština</p>
+                <p class="text-center uaecard p-2">Slovenčina</p>
+                <p class="text-center uaecard p-2">Polish</p>
+                <p class="text-center uaecard p-2">Italian</p>
+                <p class="text-center uaecard p-2">Vietnamese</p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="buttonn p-1"
+            id="openPopup2"
+            style="
+              border-style: solid;
+              border-radius: 6px;
+              border-width: 0.5px;
+              border-color: #94928d;
+              color: black;
+              background-color: white;
+              font-size: 25px;
+            "
+          >
+            <i class="fa-solid fa-globe pl-2"></i>
+            <span class="ml-2 mr-2">English</span>
+            <i class="fa-solid fa-chevron-down pr-2 angle" id="angle1"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 pr-2 mb-3 text-left">
+          <h1 class="iDetRV mb-3" style="font-size: 20px; color: ">
+            ZOMAVERSE
+          </h1>
+          <p class="iDetRV" style="cursor: pointer">Zomato</p>
+          <p class="iDetRV" style="cursor: pointer">Blinkit</p>
+          <p class="iDetRV" style="cursor: pointer">Feeding India</p>
+          <p class="iDetRV" style="cursor: pointer">Hyperpure</p>
+          <p class="iDetRV" style="cursor: pointer">Zomaland</p>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 pr-2 mb-3 text-left">
+          <h1 class="iDetRV mb-3" style="font-size: 20px; color: ">
+            FOR RESTAURANTS
+          </h1>
+          <p class="iDetRV" style="cursor: pointer">Partner With Us</p>
+          <p class="iDetRV" style="cursor: pointer">Apps For You</p>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 pr-2 mb-3 text-left">
+          <h1 class="iDetRV mb-3" style="font-size: 20px; color: ">
+            LEARN MORE
+          </h1>
+          <p class="iDetRV" style="cursor: pointer">Privacy</p>
+          <p class="iDetRV" style="cursor: pointer">Security</p>
+          <p class="iDetRV" style="cursor: pointer">Terms</p>
+          <p class="iDetRV" style="cursor: pointer">Sitemap</p>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 text-left pr-2 mb-3">
+          <h1 class="iDetRV mb-3" style="font-size: 20px; color: ">
+            SOCIAL LINKS
+          </h1>
+          <div class="d-flex flex-row mb-3">
+            <a href="https://twitter.com/zomato" target="_blank">
+              <div
+                class="card-container2 text-center mr-1 shadow"
+                style="cursor: pointer; background-color: black"
+              >
+                <i class="fa-brands fa-x-twitter icon"></i>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/zomato/" target="_blank">
+              <div
+                class="card-container2 text-center mr-1 shadow"
+                style="
+                  cursor: pointer;
+                  background-image: linear-gradient(
+                    to bottom,
+                    #a82dfa,
+                    #f743f1,
+                    #fc1c3a,
+                    #f7e11b
+                  );
+                "
+              >
+                <i class="fa-brands fa-instagram icon"></i>
+              </div>
+            </a>
+            <a href="https://in.linkedin.com/company/zomato" target="_blank">
+              <div
+                class="card-container2 text-center mr-1 shadow"
+                style="cursor: pointer; background-color: #2468f0"
+              >
+                <i class="fa-brands fa-linkedin icon"></i>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/zomato" target="_blank">
+              <div
+                class="card-container2 text-center mr-1 shadow"
+                style="cursor: pointer; background-color: #fa161e"
+              >
+                <i class="fa-brands fa-youtube icon"></i>
+              </div>
+            </a>
+          </div>
+          <a href="" target="_blank">
+            <div class="mb-2">
+              <img
+                src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                class="w-75"
+                style="cursor: pointer"
+              />
+            </div>
+          </a>
+
+          <a href="" target="_blank">
+            <div class="mb-2">
+              <img
+                src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                class="w-75"
+                style="cursor: pointer"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="share-app-popup d-flex flex-row justify-content-center p-3"
+      style="border-style: solid; border-color: #a19f9f"
+      id="otp"
+    >
+      <img
+        class="w-25 tick-image"
+        src="https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png"
+      />
+      <h5 class="mt-3 ml-3">
+        We have successfully sent a link of the app ,in your Email...
+      </h5>
+    </div>
+
+    <div class="user-pop-up" id="userPopUp" style="border-radius: 5px">
+      <div
+        class="user-information shadow-lg p-3"
+        style="
+          max-height: 200px;
+          overflow: auto;
+          background-color: white;
+          border-radius: 5px;
+        "
+      >
+        <h3 class="mb-2 p-2 user-hover" style="border-radius: 5px" id="I1">
+          Profile
+        </h3>
+
+        <h3 class="mb-2 p-2 user-hover" style="border-radius: 5px" id="I6">
+          Reviews
+        </h3>
+        <h3 class="mb-2 p-2 user-hover" style="border-radius: 5px" id="I7">
+          Log Out
+        </h3>
+      </div>
+    </div>
+
+    <div
+      class="log-out-popup d-flex flex-column justify-content-center"
+      id="logOutPopUp"
+    >
+      <div class="log-out-popup-container">
+        <div class="spinner-border3 text-center" role="status" id="spinner">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="share-app-popup d-flex flex-row justify-content-center p-3"
+      style="border-style: solid; border-color: #a19f9f"
+      id="otpMesseage"
+    >
+      <img
+        class="w-25 tick-image"
+        src="https://cdn2.iconfinder.com/data/icons/greenline/512/check-512.png"
+      />
+      <h5 class="mt-3 ml-3">
+        We have successfully sent the OTP, your OTP is
+        <input
+          style="
+            height: 30px;
+            width: 120px;
+            border-style: none;
+            font-weight: bold;
+          "
+          type="text"
+          id="OTP"
+        />..
+      </h5>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
